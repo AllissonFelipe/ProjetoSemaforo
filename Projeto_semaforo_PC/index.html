@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUAS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="main">
+        <div class="blocos diagonal" id="blc1"></div>
+        <div class="blocos ruaV" id="blc2"><div class="semaforo" id="cima-semaforo" onclick="mudarSemaforoCima()"></div></div>
+        <div class="blocos diagonal" id="blc3"></div>
+        <div class="blocos ruaH" id="blc4"><div class="semaforo" id="esquerda-semaforo" onclick="mudarSemaforoEsquerda()"></div></div>
+        <div class="blocos centro" id="blc5"></div>
+        <div class="blocos ruaH" id="blc6"><div class="semaforo" id="direita-semaforo" onclick="mudarSemaforoDireita()"></div></div>
+        <div class="blocos diagonal" id="blc7"></div>
+        <div class="blocos ruaV" id="blc8"><div class="semaforo" id="baixo-semaforo" onclick="mudarSemaforoBaixo()"></div></div>
+        <div class="blocos diagonal" id="blc9"></div>
+    </div>
+    <div id="botoes">
+        <section>
+            <select id="cima" onchange="trocar_opcaoC()">
+                <option value="1">2 mãos</option>
+                <option value="2">1 mão cima</option>
+                <option value="3">1 mão baixo</option>
+            </select>
+            <div class="horizontal">
+                <select id="esquerda" onchange="trocar_opcaoE()">
+                    <option value="1">2 mãos</option>
+                    <option value="2">1 mão direita</option>
+                    <option value="3">1 mão esquerda</option>
+                </select>
+                <select id="direita" onchange="trocar_opcaoD()">
+                    <option value="1">2 mãos</option>
+                    <option value="2">1 mão direita</option>
+                    <option value="3">1 mão esquerda</option>
+                </select>
+            </div>
+
+            <select id="baixo" onchange="trocar_opcaoB()">
+                <option value="1">2 mãos</option>
+                <option value="2">1 mão cima</option>
+                <option value="3">1 mão baixo</option>
+            </select>
+            <div class="botao-container" onclick="calcularRota()">Calcular Rotas
+            </div>
+            <div id="resultado" class="mostrar-resultado"></div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
